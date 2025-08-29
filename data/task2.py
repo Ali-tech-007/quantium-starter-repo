@@ -18,7 +18,7 @@ pink_data["price"] = pink_data["price"].replace('[\$,]', '', regex=True).astype(
 pink_data["sales"] = pink_data["price"] * pink_data["quantity"]
 
 # Step 6: Keep only useful columns
-final_data = pink_data[["date", "region", "sales"]]
+final_data = pink_data[["sales", "date", "region"]]
 
 # Step 7: Save to CSV
 final_data.to_csv("output.csv", index=False)
